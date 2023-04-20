@@ -13,8 +13,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 knitr::include_graphics("~/Desktop/about_me/about_me/jack_and_diane.jpeg")
 
 
-knitr::include_graphics("~/Desktop/about_me/about_me/love_of_my_life.jpeg")
-
+# knitr::include_graphics("~/Desktop/about_me/about_me/love_of_my_life.jpeg")
 
 ```
 

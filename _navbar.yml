@@ -1,5 +1,5 @@
 name: "Mywebsite"
-title: "A Bugg's Life"
+title: "A Bugg Life"
 type: inverse
 left:
   - text: "About me"
@@ -16,4 +16,4 @@ left:
     href: ./contact.html
 right:
   - icon: fa-github fa-lg
-    href: https://github.com/githubusername/mywebsite
+    href: https://blbugg.github.io/my_website/
