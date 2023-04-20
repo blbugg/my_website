@@ -1,12 +1,12 @@
 name: "Mywebsite"
-title: "My new website"
+title: "A Bugg's Life"
 type: inverse
 left:
   - text: "About me"
     menu:
       - text: "Learn more about me"
         href: ./aboutme.html
-  - text: "Project"
+  - text: "Projects"
     menu:
        - text: "Project part 1"
          href: ./project1.html
