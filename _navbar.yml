@@ -1,5 +1,5 @@
 name: "Mywebsite"
-title: "A Bugg Life"
+title: "A Bugg's Life"
 type: inverse
 left:
   - text: "About me"
@@ -8,9 +8,9 @@ left:
         href: ./aboutme.html
   - text: "Projects"
     menu:
-       - text: "Project part 1"
-         href: ./project1.html
-       - text: "Project part 2"
+       - text: "BIOL 3100 Final Project"
+         href: ./finalproject.html
+       - text: "Utricularia in Utah"
          href: ./project2.html
   - text: "Contact"
     href: ./contact.html
