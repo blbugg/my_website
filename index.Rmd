@@ -29,9 +29,9 @@ and Botany from Utah Valley University in 2017 and 2022 respectively. Teaching i
 
 My best friends are of the Avian kind.
 
-My life is dictated by a 4 year old tyrant.
+My life is currently dictated by a 4 year old tyrant.
 
-My 196 plants are what is keeping me sane most days.
+My 196 plants are what keep me sane most days.
 
 
 ```{r, echo=FALSE}
