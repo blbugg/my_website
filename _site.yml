@@ -1,4 +1,4 @@
-name: "A Bugg Life"
+name: "A Bugg's Life"
 output_dir: 'docs'
 output:
   html_document:
