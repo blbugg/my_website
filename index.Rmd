@@ -9,14 +9,11 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
 ```{r, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
-knitr::include_graphics("~/Desktop/about_me/about_me/jack_and_diane.jpeg")
-
-
-# knitr::include_graphics("~/Desktop/about_me/about_me/love_of_my_life.jpeg")
+knitr::include_graphics("~/Desktop/my_website/media/love_of_my_life.jpeg")
 
 ```
-
 
 ## Hello World...
 
@@ -34,9 +31,6 @@ My 196 plants are what keep me sane most days.
 
 
 ```{r, echo=FALSE}
-
-# Here is [my CV](https://github.com/blbugg/Data_Course_BUGG/media/Curriculum_Vitae.pdf) 
-
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 ```
-

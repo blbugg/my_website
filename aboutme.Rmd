@@ -4,25 +4,38 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
 ```
 
-## R Markdown
+## Hello World...
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+I am just a girl in a grown up world, trying her best to not grow up.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+I am currently an adjunct instructor in the College of Science, Department of Biology at 
+Utah Valley University in Orem, Utah. I have received Bachelor of Science degrees in Biology
+and Botany from Utah Valley University in 2017 and 2022 respectively. Teaching is my absolute favorite thing, and the time I spend with my students is something I truly treasure.
 
-```{r cars}
-summary(cars)
+My best friends are of the Avian kind.
+
+My life is currently dictated by a 4 year old tyrant.
+
+My 196 plants are what keep me sane most days.
+
+```{r}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+knitr::include_graphics("~/Desktop/my_website/media/love_of_my_life.jpeg")
+
+#knitr::include_graphics("~/Desktop/my_website/media/jack_and_diane.jpeg")
+
 ```
 
-## Including Plots
+## Curriculum Vitae
 
-You can also embed plots, for example:
+```{r, echo=FALSE}
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
