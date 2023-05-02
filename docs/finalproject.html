@@ -425,6 +425,20 @@ names and activities specifically. Another thing to note is that not all
 country names are listed as countries recognized by the United Nations,
 but for all intents and purposes here, we are only looking at the top
 few notorious countries known for attacks.</p>
+<pre><code>## # A tibble: 38,903 × 8
+##    date         year type         country       area     activ…¹ fatal…² species
+##    &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;         &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
+##  1 22-Mar-2023  2023 Unprovoked   AUSTRALIA     Western… &lt;NA&gt;    N       Nurse …
+##  2 19-Mar-2023  2023 Unprovoked   USA           Hawaii   swimmi… N       &lt;NA&gt;   
+##  3 16-Mar-2023  2023 Unprovoked   AUSTRALIA     Western… surfing N       5m to …
+##  4 06-Mar-2023  2023 Unprovoked   BRAZIL        Pernamb… swimmi… N       &lt;NA&gt;   
+##  5 05-Mar-2023  2023 Unprovoked   BRAZIL        Pernamb… swimmi… N       &lt;NA&gt;   
+##  6 02-Mar-2023  2023 Unprovoked   SEYCHELLES    Praslin… swimmi… &lt;NA&gt;    Lemon …
+##  7 21-Feb-2023  2023 Unprovoked   BRAZIL        Pernamb… surfing N       &lt;NA&gt;   
+##  8 19-Feb-2023  2023 Unprovoked   NEW CALEDONIA South P… swimmi… Y       Bull s…
+##  9 19-Feb-2023  2023 Unprovoked   USA           Florida  surfing N       &lt;NA&gt;   
+## 10 18-Feb-2023  2023 Questionable ARGENTINA     Patagon… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;   
+## # … with 38,893 more rows, and abbreviated variable names ¹​activity, ²​fatal_y_n</code></pre>
 </div>
 <div id="total-number-of-attacks" class="section level2">
 <h2>Total Number of “Attacks”</h2>
@@ -437,29 +451,15 @@ class="section level2">
 </div>
 <div id="fatalities-over-the-last-50-years" class="section level2">
 <h2>Fatalities Over the Last 50 years</h2>
+<pre><code>## # A tibble: 2 × 2
+##   fatal_y_n count
+##   &lt;chr&gt;     &lt;int&gt;
+## 1 N          4761
+## 2 Y          1446</code></pre>
 </div>
 <div id="total-attacks-for-the-top-10-countries" class="section level2">
 <h2>Total “Attacks” for the Top 10 Countries</h2>
 <p><img src="finalproject_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-</div>
-<div id="total-fatalities-for-the-top-10-countries"
-class="section level2">
-<h2>Total Fatalities for the Top 10 Countries</h2>
-</div>
-<div id="surprise-surprise" class="section level2">
-<h2>Surprise Surprise…</h2>
-<p>The United States may be the “shark attack” capital of the world, but
-it is not the “shark attack resulting in fatality” capital of the
-world.</p>
-</div>
-<div id="attacks-in-each-australian-state" class="section level2">
-<h2>Attacks in each Australian State</h2>
-</div>
-<div id="fatalities-in-each-australian-state" class="section level2">
-<h2>Fatalities in each Australian State</h2>
-</div>
-<div id="observing-fatalities-in-australia" class="section level2">
-<h2>Observing Fatalities in Australia</h2>
 </div>
 
 

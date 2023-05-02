@@ -680,6 +680,8 @@ df_2 <- df_2 %>%
   mutate(activity = ifelse(grepl("Kakaying", activity), "watercraft", activity)) %>% 
   mutate(activity = ifelse(grepl("Jet", activity), "watercraft", activity))
 
+print(df_2)
+
 ```
 
 ## Total Number of "Attacks"
@@ -795,6 +797,8 @@ fatal <- df_2 %>% select(country,fatal_y_n) %>%
   group_by(fatal_y_n) %>% 
   summarise(count=n())
 
+print(fatal)
+
 ```
 
 ## Total "Attacks" for the Top 10 Countries
@@ -842,9 +846,10 @@ ggplot(by_country, aes(x = reorder(country, -n), y = n)) +
 
 ```
 
-## Total Fatalities for the Top 10 Countries
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
+
+## Total Fatalities for the Top 10 Countries
 
 library(tidyverse)
 library(easystats)
@@ -869,14 +874,14 @@ library(ozmaps)
 library(yaml)
 
 ```
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
 
 ## Surprise Surprise...
 
-The United States may be the "shark attack" capital of the world, but it is not
-the "shark attack resulting in fatality" capital of the world. 
-
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
-
+#The United States may be the "shark attack" capital of the world, but it is not
+#the "shark attack resulting in fatality" capital of the world. 
 library(tidyverse)
 library(easystats)
 library(dplyr)
@@ -901,9 +906,9 @@ library(yaml)
 
 ```
 
-## Attacks in each Australian State
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
+## Attacks in each Australian State
 
 library(tidyverse)
 library(easystats)
@@ -940,10 +945,10 @@ library(yaml)
 
 ```
 
-## Fatalities in each Australian State
+
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-
+## Fatalities in each Australian State
 library(tidyverse)
 library(easystats)
 library(dplyr)
@@ -973,9 +978,10 @@ library(yaml)
 
 ```
 
-## Observing Fatalities in Australia
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
+
+## Observing Fatalities in Australia
 
 library(tidyverse)
 library(easystats)
