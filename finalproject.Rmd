@@ -851,6 +851,24 @@ ggplot(by_country, aes(x = reorder(country, -n), y = n)) +
 
 ## Total Fatalities for the Top 10 Countries
 
+by_fatality <- df_2 %>%
+  group_by(fatal_y_n, country) %>%
+  tally() %>%
+  na.omit(by_fatality) %>% 
+  top_n(10)
+
+ggplot(by_country, aes(x = reorder(country, -n), y = n)) +
+  geom_bar(stat="identity") +
+  xlab("Country") +
+  ylab("Number of attacks") +
+  theme(axis.text.x  = element_text(angle=45, vjust=0.5, size=8)) +
+  geom_text(
+    aes(label = n, y = n + 20),
+    position = position_dodge(0.9),
+    vjust = 0
+  )
+
+
 library(tidyverse)
 library(easystats)
 library(dplyr)
@@ -998,10 +1016,9 @@ ggplot(aus_df4, aes(x = state, y = n, fill = "red")) +
 
 ```
 
+## Observing Fatalities in Australia
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-
-## Observing Fatalities in Australia
 
 library(tidyverse)
 library(easystats)
@@ -1024,5 +1041,7 @@ library(plotly)
 library(rgdal)
 library(ozmaps)
 library(yaml)
+
+knitr::include_graphics("./aus_state.png")
 
 ```
