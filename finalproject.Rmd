@@ -846,10 +846,59 @@ ggplot(by_country, aes(x = reorder(country, -n), y = n)) +
 
 ```
 
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+
+library(tidyverse)
+library(easystats)
+library(dplyr)
+library(janitor)
+library(leaps)
+library(vroom)
+library(zoo)
+library(skimr)
+library(stringr)
+library(geojsonio)
+library(broom)
+library(rjson)
+library(png)
+library(pandoc)
+library(raster)
+library(ggplot2)
+library(sf)
+library(plotly)
+library(rgdal)
+library(ozmaps)
+library(yaml)
+
+df_2_activity <- 
+  df_2 %>% 
+  group_by(activity) %>% 
+  filter(!is.na(activity)) %>% 
+  count()
+
+ggplot(df_2_activity, aes(x = reorder(activity, -n), y = n)) +
+  geom_bar(stat="identity") +
+  xlab("Activity") +
+  ylab("Number of attacks") +
+  theme(axis.text.x  = element_text(angle=0, vjust=0.5, size=6)) +
+  geom_text(
+    aes(label = n, y = n),
+    position = position_dodge(0.9),
+    vjust = 0
+  )
+```
+
+## Total Fatalities for the Top 10 Countries
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 
 ## Total Fatalities for the Top 10 Countries
+
+df_2_activity <- 
+  df_2 %>% 
+  group_by(activity) %>% 
+  filter(!is.na(activity)) %>% 
+  count()
 
 by_fatality <- df_2 %>%
   group_by(fatal_y_n, country) %>%
@@ -890,6 +939,8 @@ library(plotly)
 library(rgdal)
 library(ozmaps)
 library(yaml)
+
+
 
 ```
 
@@ -1018,6 +1069,9 @@ ggplot(aus_df4, aes(x = state, y = n, fill = "red")) +
 
 ## Observing Fatalities in Australia
 
+My map has yet to be fully successful in merging the dataset containing known latitude and longitude values provided by the Taronga Zoo of Sydney. But as we
+can see above, the state of New South Wales has experienced the most fatalities. While the Northern Territory saw the least.
+
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 
 library(tidyverse)
@@ -1045,3 +1099,12 @@ library(yaml)
 knitr::include_graphics("./aus_state.png")
 
 ```
+
+## Conclusion
+
+As we can see from the data, the numbers of attacks compared to the amount of people who have entered the ocean over the last 2000 years, which I can only assume is in the millions, is quite a small fraction. It is widely known that you have a greater chance of being in a plane crash than being attacked by a shark. However, there is always a chance.
+
+There are so many possibilities as to why the United States is the leader in global shark attacks as well as the causes for Australia experiencing the most fatalities. Mammal migration patterns, currents, climate change, increases in human population around the world (meaning more people going to the beach), habitat loss, dumb ass fishermen throwing waste from fish caught back into the ocean while near public beaches...the list goes on.
+
+It is important to note that though these accidents are tragic, what is often overlooked is the fact that humans continue to kill huge amounts of sharks at astounding rates. In an article published in "Marine Policy" in 2012, it is estimated based on data collected that between 63 and 273 million sharks are
+killed each year due to human causes.
