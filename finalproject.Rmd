@@ -945,10 +945,10 @@ library(yaml)
 
 ```
 
-
+## Fatalities in each Australian State
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-## Fatalities in each Australian State
+
 library(tidyverse)
 library(easystats)
 library(dplyr)
@@ -975,6 +975,26 @@ library(yaml)
   #geom_bar(stat = "identity") + 
   #labs(x = "States", y = "Number of Fatalities") + theme(legend.position="none") +
   #ggtitle("Total Number of Fatalities in each State of Australia")
+
+aus_df1 <- aus_df %>% clean_names()
+
+aus_df3 <- aus_df1[aus_df1$victim_injury == 'fatal',]
+
+aus_df3 <- aus_df3 %>%
+  mutate(state = recode(state, NSW = 'New South Wales', WA = 'Western Australia', 
+                        QLD =  'Queensland', SA = 'Southern Australia', 
+                        TAS = 'Tasmania', VIC = 'Victoria', 
+                        NT = 'Northern Territory'))
+
+aus_df4 <- aus_df3 %>% 
+  group_by(state) %>% 
+  filter(!is.na(state)) %>% 
+  count()
+
+ggplot(aus_df4, aes(x = state, y = n, fill = "red")) + 
+  geom_bar(stat = "identity") + 
+  labs(x = "States", y = "Number of Fatalities") + theme(legend.position="none") +
+  ggtitle("Total Number of Fatalities in each State of Australia")
 
 ```
 
