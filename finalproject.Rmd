@@ -830,8 +830,8 @@ library(yaml)
 by_country <- df_2 %>%
   group_by(country) %>%
   tally() %>%
-  top_n(10) %>% 
-  na.omit(by_country)
+  na.omit(by_country) %>% 
+  top_n(10)
 
 ggplot(by_country, aes(x = reorder(country, -n), y = n)) +
   geom_bar(stat="identity") +
