@@ -27,7 +27,7 @@ My best friends are of the Avian kind.
 
 My life is currently dictated by a 4 year old tyrant.
 
-My 196 plants are what keep me sane most days.
+My 196 plants are what keep me sane most days, cause you know Git Hub and R ain't doing it.
 
 
 ```{r, echo=FALSE}
