@@ -896,28 +896,13 @@ ggplot(df_2_activity, aes(x = reorder(activity, -n), y = n)) +
 
 ## Total Fatalities for the Top 10 Countries
 
-df_2_activity <- 
-  df_2 %>% 
-  group_by(activity) %>% 
-  filter(!is.na(activity)) %>% 
-  count()
-
 by_fatality <- df_2 %>%
   group_by(fatal_y_n, country) %>%
   tally() %>%
   na.omit(by_fatality) %>% 
   top_n(10)
 
-ggplot(by_country, aes(x = reorder(country, -n), y = n)) +
-  geom_bar(stat="identity") +
-  xlab("Country") +
-  ylab("Number of attacks") +
-  theme(axis.text.x  = element_text(angle=45, vjust=0.5, size=8)) +
-  geom_text(
-    aes(label = n, y = n + 20),
-    position = position_dodge(0.9),
-    vjust = 0
-  )
+print(by_fatality)
 
 
 library(tidyverse)
@@ -1064,7 +1049,9 @@ aus_df4 <- aus_df3 %>%
 
 ggplot(aus_df4, aes(x = state, y = n, fill = "red")) + 
   geom_bar(stat = "identity") + 
-  labs(x = "States", y = "Number of Fatalities") + theme(legend.position="none") +
+  labs(x = "States", y = "Number of Fatalities") +
+  theme_minimal() +
+  theme(legend.position="none") +
   ggtitle("Total Number of Fatalities in each State of Australia")
 
 ```
