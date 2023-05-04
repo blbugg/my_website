@@ -896,15 +896,6 @@ ggplot(df_2_activity, aes(x = reorder(activity, -n), y = n)) +
 
 ## Total Fatalities for the Top 10 Countries
 
-by_fatality <- df_2 %>%
-  group_by(fatal_y_n, country) %>%
-  tally() %>%
-  na.omit(by_fatality) %>% 
-  top_n(10)
-
-print(by_fatality)
-
-
 library(tidyverse)
 library(easystats)
 library(dplyr)
@@ -927,7 +918,13 @@ library(rgdal)
 library(ozmaps)
 library(yaml)
 
+by_fatality <- df_2 %>%
+  group_by(fatal_y_n, country) %>%
+  tally() %>%
+  na.omit(by_fatality) %>% 
+  top_n(10)
 
+print(by_fatality)
 
 ```
 
